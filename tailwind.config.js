@@ -1,3 +1,4 @@
+const { colors } = require('tailwindcss/defaultTheme');
 module.exports = {
   future: {
     // removeDeprecatedGapUtilities: true,
@@ -5,8 +6,13 @@ module.exports = {
   },
   purge: [],
   theme: {
-    extend: {},
+    colors: {
+      ...colors,
+      main: {
+        100: '#2A2A2E',
+      },
+    },
   },
   variants: {},
   plugins: [],
-}
+};
